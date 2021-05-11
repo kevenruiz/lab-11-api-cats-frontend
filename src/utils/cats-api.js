@@ -8,3 +8,9 @@ export async function getCats() {
   return response.body;
 }
 
+export async function getCat(id) {
+  const response = await request.get(`${URL}/${id}`);
+  return response.body;
+}
+
+

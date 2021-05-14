@@ -1,0 +1,13 @@
+.CatDetailPage {
+  padding: 20px;
+}
+
+
+.CatDetailPage p {
+  margin: 15px 0;
+}
+
+.CatDetailPage a {
+  font-size: .9rem;
+  margin-right: 10px;
+}

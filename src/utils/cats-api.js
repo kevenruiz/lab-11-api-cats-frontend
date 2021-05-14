@@ -1,6 +1,6 @@
 import request from 'superagent';
 
-const URL = 'https://thawing-thicket-67958.herokuapp.com/api/cats';
+const URL = '/api/cats';
 //I added the function on the previos step, made a change for the commit. 
 
 export async function getCats() {

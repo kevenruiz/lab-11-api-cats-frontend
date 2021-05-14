@@ -15,9 +15,7 @@ export default class CatDetailPage extends Component {
     catch (err) {
       console.log(err.message);
     }
-    finally {
-      this.setState({});
-    }
+
   }
 
   render() {

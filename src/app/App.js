@@ -2,6 +2,8 @@ import { Component } from 'react';
 import Header from './Header';
 import Footer from './Footer';
 import Home from '../home/Home';
+import CatsPage from '../cats/CatsPage';
+import CatDetailPage from '../cat/CatDetailPage';
 import {
   BrowserRouter as Router,
   Route,
@@ -26,15 +28,15 @@ class App extends Component {
                 )}
               />
 
-              <Route path="/resources" exact={true}
+              <Route path="/cats" exact={true}
                 render={routerProps => (
-                  <div>Implement a page of resources</div>
+                  <CatsPage CatsPage {...routerProps} />
                 )}
               />
 
-              <Route path="/resources/:id"
+              <Route path="/cats/:id"
                 render={routerProps => (
-                  <div>Implement a page for id {routerProps.match.params.id}</div>
+                  <CatDetailPage page for id {...routerProps.match.params.id} />
                 )}
               />
 

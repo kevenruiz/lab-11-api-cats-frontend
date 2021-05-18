@@ -7,10 +7,10 @@ export default class CatForm extends Component {
     type: '',
     lives: 9,
     url: '',
-
     year: '',
     isSidekick: false
   }
+
 
   componentDidMount() {
     const { cat } = this.props;
@@ -49,7 +49,7 @@ export default class CatForm extends Component {
   }
 
   render() {
-    const { name, type, lives, year, isSidekick } = this.state;
+    const { name, type, lives, url, year, isSidekick } = this.state;
     const { cat } = this.props;
 
     return (
@@ -96,10 +96,14 @@ export default class CatForm extends Component {
             </select>
           </label>
         </p>
-
-
-
-
+        <p>
+          <label>
+            <span>Cat Image Url</span>
+            <input name="url" required placeholder="Url to image of cat"
+              value={url} onChange={this.handleChangeUrl}
+            />
+          </label>
+        </p>
 
         <p>
           <label>
@@ -141,12 +145,5 @@ export default class CatForm extends Component {
 
 // this was something in line 100, i removed the image tag, but I might need to
 added a later time in the lab maybe
-<p>
-<label>
-  <span>Cat Image Url</span>
-  <input name="url" required placeholder="Url to image of cat"
-    value={url} onChange={this.handleChangeUrl}
-  />
-</label>
-</p>
+
 */

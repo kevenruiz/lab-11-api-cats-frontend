@@ -1,6 +1,7 @@
 import { Component } from 'react';
 
 import CatForm from '../common/CatForm';
+//I dont have a Loader
 // import Loader from '../common/Loader';
 import { addCat } from '../utils/cats-api';
 import './CatAddPage.css';

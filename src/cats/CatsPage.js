@@ -2,6 +2,7 @@ import { Component } from 'react';
 import './CatsPage.css';
 import CatList from './CatList';
 import { getCats } from '../utils/cats-api';
+console.log('Hello from Catpage');
 
 export default class CatsPage extends Component {
   state = {

@@ -3,6 +3,7 @@ import CatForm from '../common/CatForm';
 // import Loader from '../common/Loader';
 import { getCat, updateCat } from '../utils/cats-api';
 import './CatEditPage.css';
+console.log('Hello from CatEditPage');
 
 export default class CatEditPage extends Component {
   state = {

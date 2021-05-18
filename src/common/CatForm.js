@@ -7,7 +7,7 @@ export default class CatForm extends Component {
     type: '',
     lives: 9,
     url: '',
-    // url: 'https://www.michiganhumane.org/wp-content/uploads/2019/12/Lil-Bub.jpg',
+
     year: '',
     isSidekick: false
   }
@@ -49,7 +49,7 @@ export default class CatForm extends Component {
   }
 
   render() {
-    const { name, type, lives, url, year, isSidekick } = this.state;
+    const { name, type, lives, year, isSidekick } = this.state;
     const { cat } = this.props;
 
     return (
@@ -66,10 +66,10 @@ export default class CatForm extends Component {
         <p>
           <label>
             <span>Cat Type</span>
-            <select name="type" required placeholder="Type (tabby, etc.)"
+            <select name="type" required placeholder="Type"
               value={type} onChange={this.handleChangeType}
             >
-              <option value="" disabled>Type (Tabby, Angora, etc.)</option>
+              <option value="" disabled>Type of feline</option>
               <option>Angora</option>
               <option>Grey Tabby</option>
               <option>Orange Tabby</option>
@@ -97,20 +97,15 @@ export default class CatForm extends Component {
           </label>
         </p>
 
-        <p>
-          <label>
-            <span>Cat Image Url</span>
-            <input name="url" required placeholder="Url to image of cat"
-              value={url} onChange={this.handleChangeUrl}
-            />
-          </label>
-        </p>
+
+
+
 
         <p>
           <label>
             <span>Year Introduced</span>
             <input name="year" required pattern="\d{4}"
-              title="Should be a four digit year like 2021"
+              title="in YYYY form"
               placeholder="Enter a four-digit year"
               value={year} onChange={this.handleChangeYear}
             />
@@ -137,3 +132,21 @@ export default class CatForm extends Component {
     );
   }
 }
+
+
+// marty had this on the top (state) url
+// url: 'https://www.michiganhumane.org/wp-content/uploads/2019/12/Lil-Bub.jpg',
+
+/*
+
+// this was something in line 100, i removed the image tag, but I might need to
+added a later time in the lab maybe
+<p>
+<label>
+  <span>Cat Image Url</span>
+  <input name="url" required placeholder="Url to image of cat"
+    value={url} onChange={this.handleChangeUrl}
+  />
+</label>
+</p>
+*/

@@ -4,6 +4,8 @@ import Footer from './Footer';
 import Home from '../home/Home';
 import CatsPage from '../cats/CatsPage';
 import CatDetailPage from '../cat/CatDetailPage';
+import CatAddPage from '../cat-add/CatAddPage';
+import CatEditPage from '../cat-edit/CatEditPage';
 import {
   BrowserRouter as Router,
   Route,

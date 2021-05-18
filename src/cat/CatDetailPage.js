@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { getCat } from '../utils/cats-api';
+import { getCat, deleteCat } from '../utils/cats-api';
 import { Link } from 'react-router-dom';
 
 export default class CatDetailPage extends Component {
@@ -17,6 +17,25 @@ export default class CatDetailPage extends Component {
       console.log(err.message);
     }
 
+  }
+
+  handleDelete = async () => {
+    const { cat } = this.state;
+    const { history } = this.props;
+
+    const confirmation = `Are you sure you want to delete this very specific item?`;
+
+    if (!window.confirm(confirmation)) { return; }
+
+    try {
+      this.setState({ loading: true });
+      await deleteCat(cat.id);
+      history.push('/cats');
+    }
+    catch (err) {
+      console.log(err.message);
+      this.setState({ loading: false });
+    }
   }
 
   render() {
@@ -39,6 +58,10 @@ export default class CatDetailPage extends Component {
         <Link to={`/cats/${cat.id}/edit`}>
           Edit Cat Info
         </Link>
+
+        <button className="delete" onClick={this.handleDelete}>
+          Revome Cat
+        </button>
 
 
 

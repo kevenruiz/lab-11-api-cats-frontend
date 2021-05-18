@@ -11,6 +11,15 @@ export default class Home extends Component {
         <p>
           <Link to='/cats'>See the List</Link>
         </p>
+        <p>
+          <Link to='/cats/add'>Add a cat</Link>
+        </p>
+
+
+
+
+
+
       </div>
     );
   }
